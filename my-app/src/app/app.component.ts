@@ -15,10 +15,14 @@ import { Component } from '@angular/core';
 @Component({ //--decorator
   selector: 'app-root', //当前组件的引用地址-将组件渲染到app-root中   
   // templateUrl: './app.component.html', //组件模板
-  template: `<h1>hello ES6 的模板字符串---{{title}}</h1>`,
+  template: `
+    <h1>hello ES6 的模板字符串---{{title}}</h1><hr>
+    <hello-world></hello-world><hr>
+    <hello-everyone></hello-everyone>
+  `,
   // styleUrls: ['./app.component.css'] //组件的样式文件
   styles: [`h1{color:#369;}`]
 })
 export class AppComponent { //--class组件类，导出：组件名称
-  title = 'this is my first angular project: my-app';
+  title = 'My first angular project: my-app';
 }
