@@ -1,0 +1,23 @@
+<p [style.color]="'red'">
+  形式1 hello-css works!
+</p>
+<p [style.color]="true?'blue':'red'">
+  形式2 hello-css works!
+</p>
+<button [style.font-size.px]="20">size</button><br>
+<button [style.font-size.em]="2">size</button><br>
+<button [style.font-size.%]="100">size</button><br>
+<hr>
+<p [ngStyle]="{'color':'yellow', 'font-size':'80px'}">
+  hello-css works!
+</p>
+<p [ngStyle]="cssObj">
+  hello-css works!
+</p>
+<hr>
+<p class="container">hello-css works</p>
+<p [class]="'container'">hello-css works</p>
+<p class="box" [class.container]="true">hello-css works</p>
+<p [ngClass]="{container:false,box:true}">hello-css works</p>
+<hr>
+<div ngNonBindable>使用{{content}}获取值</div>
