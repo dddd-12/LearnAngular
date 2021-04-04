@@ -1,0 +1,17 @@
+<p>hello-template works!</p>
+<div>
+  <p>双向绑定获取值的方式</p>
+  <input type="text" [(ngModel)]="text">
+  <button (click)="showText()">双向绑定</button>
+  <hr>
+  <p>模板变量获取值的方式</p>
+  <input type="text" #phone>
+  <button (click)="showText02(phone.value)">双向绑定</button>
+  <hr>
+  <p>使用安全导航符 ?.</p>
+  <p>{{people?.name}}</p>
+  <p>使用判断</p>
+  <div *ngIf="people != null">
+    {{people.name}}
+  </div>
+</div>
