@@ -1,0 +1,8 @@
+<p>hello-two-way works!</p>
+<div>
+  <input type="text" [(ngModel)]="text"/>
+  <h3>{{text}}</h3>
+  <hr>
+  <input type="text" [value]="num" (input)="inputVal($event)">
+  <h3>{{num}}</h3>
+</div>
