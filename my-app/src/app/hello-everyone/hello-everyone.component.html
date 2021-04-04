@@ -1,1 +1,25 @@
-<p>hello-everyone works!</p>
+<p *ngIf="flag">显示组件</p>
+<p *ngIf="!flag">不显示组件</p>
+<hr>
+<ul>
+  <li *ngFor="let city of citys">{{city}}</li>
+</ul>
+<hr>
+<ul>
+  <li *ngFor="let fruit of fruits; let i=index;let odd=odd;">
+    {{fruit.name}}---{{i}} -- {{odd}}
+  </li>
+</ul>
+<hr>
+
+<div [ngSwitch]="char">
+<p *ngSwitchCase="'A'">
+  你的成绩是 A
+</p>
+<p *ngSwitchCase="'B'">
+  你的成绩是 B
+</p>
+<p *ngSwitchDefault>
+  你的成绩垫底
+</p>
+</div>
