@@ -1,0 +1,34 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <label>姓名：</label>
+  <input type="text"
+    name="name"
+    formControlName="name"><br>
+  <label>密码：</label>
+  <input type="text"
+    name="pwd"
+    formControlName="pwd"><br>
+
+  <div formGroupName="address">
+    <label>街道：</label>
+    <input type="text"
+      formControlName="street"><br>
+    <label>城市：</label>
+    <input type="text"
+      formControlName="city"><br>
+  </div>
+
+  <button type="button" (click)="forceReset()">清空数据</button>
+  <button type="button" (click)="defaultReset()">重置表单</button>
+  <button type="button" (click)="setFormValue()">setValue</button>
+  <button type="button" (click)="patchFormValue()">patchValue</button>
+  <button type="submit">提交</button>
+</form>
+<p>userForm: {{userForm.value | json}}</p>
+<p>name: {{userForm.get('name').value}}</p>
+<p>pwd: {{userForm.get('pwd').value}}</p>
+<p>address/street: {{userForm.get('address.street').value}}</p>
+<p>address/city: {{userForm.get('address.city').value}}</p>
+<p>-------------</p>
+<p>是否有效：{{userForm.status}}</p>
+<p>是否修改过：{{userForm.pristine}}</p>
+<p>是否触摸过：{{userForm.touched}}</p>
