@@ -18,7 +18,11 @@ import { HelloTemplateComponent } from './hello-template/hello-template.componen
 import { HelloSelfDirectiveComponent } from './hello-self-directive/hello-self-directive.component';
 import { AppHighlightDirective } from "./highlight.directive.component";
 import { HelloFormComponent } from './hello-form/hello-form.component';
-import { HelloFormbuilderComponent } from './hello-formbuilder/hello-formbuilder.component'
+import { HelloFormbuilderComponent } from './hello-formbuilder/hello-formbuilder.component';
+import { HelloFatherChildComponent, HelloChildComponent } from './hello-father-child/hello-father-child.component';
+import { HelloStyleComponent } from './hello-style/hello-style.component';
+import { HelloStyleTypeComponent } from './hello-style-type/hello-style-type.component';
+import { HelloStyleSelectorComponent } from './hello-style-selector/hello-style-selector.component'
 
 @NgModule({ //装饰器函数：用于接收一个描述模块属性的元数据对象
   // 使用组件时必须先声明组件
@@ -37,7 +41,12 @@ import { HelloFormbuilderComponent } from './hello-formbuilder/hello-formbuilder
     HelloSelfDirectiveComponent,
     AppHighlightDirective,
     HelloFormComponent,
-    HelloFormbuilderComponent
+    HelloFormbuilderComponent,
+    HelloFatherChildComponent,
+    HelloChildComponent,
+    HelloStyleComponent,
+    HelloStyleTypeComponent,
+    HelloStyleSelectorComponent
   ],
   imports: [ //引入本模块需要的类，兼容性组件-其他模块
     BrowserModule,

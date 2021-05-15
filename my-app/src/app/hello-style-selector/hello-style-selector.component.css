@@ -1,0 +1,11 @@
+p{color:red;}
+:host{
+  display: block;
+  background: yellow;
+}
+:host(.active){
+  border: 3px solid red;
+}
+:host-context(.italic) p{
+  font-style: italic;
+}
